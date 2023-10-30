@@ -10,7 +10,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+
+import org.bouncycastle.crypto.examples.DESExample;
+
 import java.io.*;  
+
 
 public class EmailReport{
 
@@ -32,7 +36,7 @@ public void main ()
     /*Create session object*/
     Session session = Session.getInstance(sysmProp, null);
 
-    
+
     	  
     
     /*Create MimeMessage object and add recipients */

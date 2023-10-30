@@ -21,7 +21,7 @@ public class Mercury_TC3_flightbooking extends baseclass {
 	public void flightbooking() throws IOException {
 		try
 		{
-		test = extent.createTest("flight booking");
+		test = extent.createTest("Mercury_TC3_flightbooking");
 	    test.info("user started flight booking");
 		booking.clickonflight();
 		test.pass("clicked on flight successfully");

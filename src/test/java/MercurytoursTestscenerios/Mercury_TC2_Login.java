@@ -30,7 +30,7 @@ public class Mercury_TC2_Login extends baseclass {
 	public void Loginpage() throws Exception {
 		try {
 	    
-		test = extent.createTest("Login the mercury tours");
+		test = extent.createTest("Mercury_TC2_Login");
 	    test.info("user started login the page");
 		loginpage.clickonsignon();
 		test.pass("clicked on sign on successfully");

@@ -77,7 +77,7 @@ public class Mercurytours_register {
 	@CacheLookup
 	WebElement submit ;
 	
-	@FindBy(xpath = "//b[contains(text() ,'pradeepkumara')]")
+	@FindBy(xpath = "//b[contains(text() ,'pradeepkumara.')]")
 	@CacheLookup
 	WebElement validateusername ;
 	
@@ -88,7 +88,7 @@ public class Mercurytours_register {
         	 String[][] arrObj = null;
 			try {
 				arrObj = execelldata.getExcelData(
-				         "C:\\Users\\Pradeep\\Documents\\checking\\New.xls","Sheet1");
+				         "C:\\Users\\Pradeep\\Documents\\checking\\New.xls","Register");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -106,7 +106,7 @@ public class Mercurytours_register {
 	
 	public void enterfirstname() {
 		
-		reause.sendKeys( firstName, driver,   "pradeep" );
+		reause.sendKeys( firstName, driver,   arrObj[1][0] );
 	}
 	
 	public void enterlastname() {

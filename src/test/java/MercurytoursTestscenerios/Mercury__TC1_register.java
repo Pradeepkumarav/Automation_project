@@ -39,7 +39,7 @@ public class Mercury__TC1_register extends baseclass {
 		try {	
 		
 			
-		 test = extent.createTest("Register the mercury tours");
+		 test = extent.createTest("Mercury__TC1_register");
 		test.info("user started registering the page");
 
 		

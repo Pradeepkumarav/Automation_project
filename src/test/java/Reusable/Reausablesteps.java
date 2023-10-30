@@ -2,7 +2,9 @@ package Reusable;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,6 +21,7 @@ public class Reausablesteps {
 
         WebElement elmnt = wait.until(ExpectedConditions.elementToBeClickable(element));
         return elmnt;
+        
     }
 	
 	public void sendKeys( WebElement element,WebDriver driver, String sendkey) {
@@ -26,11 +29,13 @@ public class Reausablesteps {
     		waitForElementToBeClickable(driver, element, 10);
             element.isDisplayed();
             element.clear();
+            element.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
             element.sendKeys(sendkey);
     	}
     	else {
     		System.out.println(element + "is not present or not editable");
-    	}
+    	     
+    	     }
     }
 	
 	 public void click(WebDriver driver, WebElement element) {

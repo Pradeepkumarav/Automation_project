@@ -30,7 +30,7 @@ import mercurytour_utilities.Readconfig;
 
 public class baseclass {
 
-	
+	int count;
 	static ExtentReports extent ;
 	ExtentSparkReporter sparkReporter;
 	static ExtentTest test;
@@ -41,14 +41,19 @@ public class baseclass {
 		extent = new ExtentReports();
 		sparkReporter = new ExtentSparkReporter("mercurytoursReport.html");
 		extent.attachReporter(sparkReporter);
+		
+		int count=0;
+		this.count=count;
 	}
 	
 	@AfterSuite 
 	public void AfterSuite() {
 		extent.flush();
-		driver.quit();
+		
 	}
 	Readconfig config=new Readconfig();
+	
+	
 	String baseUrl = config.getApplicationURL();
 	String chromebrowser=config.getChromePath();
 	String Firefoxpath=config.getFireFoxPath();
@@ -98,14 +103,14 @@ public class baseclass {
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	      // Maximize the browser
 	      driver.manage().window().maximize();
-	      driver.get(baseUrl); 
+	    //  driver.get(baseUrl); 
 	      
 	      
 		}
 		 else if(br.equals("firefox"))
 		{
 			 
-		
+	
 			
 		System.setProperty("webdriver.firefox.marionette", Firefoxpath);  
 		
@@ -123,9 +128,8 @@ public class baseclass {
 		        
 		}
 		
-		driver.get(baseUrl);
-		
-      
+          driver.get(baseUrl);
+    
 		
 	}
 	

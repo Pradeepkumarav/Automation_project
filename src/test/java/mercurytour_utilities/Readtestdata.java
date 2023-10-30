@@ -27,8 +27,7 @@ public class Readtestdata {
             int noOfRows = sheet.getPhysicalNumberOfRows();
             int noOfCols = row.getLastCellNum();
             
-            System.out.println(noOfRows);
-            System.out.println(noOfCols);
+            
             Cell cell;
             data = new String[noOfRows][noOfCols];
            

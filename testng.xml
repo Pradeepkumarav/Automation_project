@@ -3,9 +3,10 @@
   <test name="Test">
 	  <parameter name = "browser" value="firefox"/>
     <classes>
-		<class name="MercurytoursTestscenerios.Mercury__TC1_register"/>
-		<class name="MercurytoursTestscenerios.Mercury_TC2_Login"/>
-       <class name="MercurytoursTestscenerios.Mercury_TC3_flightbooking"/>
+		 <class name="MercurytoursTestscenerios.Mercury__TC1_register"/>
+		  <class name="MercurytoursTestscenerios.Mercury_TC2_Login"/>
+		   <class name="MercurytoursTestscenerios.Mercury_TC3_flightbooking"/>
+       <class name="MercurytoursTestscenerios.Orange_hrm_TC4_addemployee"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
